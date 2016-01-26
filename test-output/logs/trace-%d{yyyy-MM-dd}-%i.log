@@ -1,0 +1,8 @@
+2016-01-25 at 12:27:40 CST TRACE com.saic.maven.test.InterfaceTest.Hello 14 main - entry
+2016-01-25 at 12:27:40 CST ERROR com.saic.maven.test.InterfaceTest.Hello 15 main - Did it again!
+2016-01-25 at 12:27:40 CST INFO  com.saic.maven.test.InterfaceTest.Hello 16 main - 我是info信息
+2016-01-25 at 12:27:40 CST DEBUG com.saic.maven.test.InterfaceTest.Hello 17 main - 我是debug信息
+2016-01-25 at 12:27:40 CST WARN  com.saic.maven.test.InterfaceTest.Hello 18 main - 我是warn信息
+2016-01-25 at 12:27:40 CST FATAL com.saic.maven.test.InterfaceTest.Hello 19 main - 我是fatal信息
+2016-01-25 at 12:27:40 CST DEBUG com.saic.maven.test.InterfaceTest.Hello 20 main - 我是debug信息
+2016-01-25 at 12:27:40 CST TRACE com.saic.maven.test.InterfaceTest.Hello 21 main - exit

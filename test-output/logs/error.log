@@ -1,0 +1,2 @@
+08:48:18.157 ERROR com.saic.maven.test.InterfaceTest.Hello 15 main - Did it again!
+08:48:18.159 FATAL com.saic.maven.test.InterfaceTest.Hello 19 main - 我是fatal信息
