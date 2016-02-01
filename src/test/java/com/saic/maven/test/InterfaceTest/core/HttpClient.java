@@ -1,4 +1,4 @@
-package com.saic.maven.test.InterfaceTest;
+package com.saic.maven.test.InterfaceTest.core;
 
 import java.io.File;  
 import java.io.FileInputStream;  
