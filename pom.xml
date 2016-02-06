@@ -76,6 +76,11 @@
 			<groupId>net.java.dev.jna</groupId>
 			<artifactId>jna-platform</artifactId>
 			<version>4.2.1</version>
-		</dependency>													    
+		</dependency>
+		<dependency>
+		    <groupId>org.skyscreamer</groupId>
+		    <artifactId>jsonassert</artifactId>
+		    <version>1.3.0</version>
+		</dependency>															    
   </dependencies> 
 </project>
