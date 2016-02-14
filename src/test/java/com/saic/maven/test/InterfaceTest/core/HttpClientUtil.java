@@ -22,6 +22,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.client.utils.URLEncodedUtils;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
@@ -29,6 +30,8 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 import org.testng.Assert;
+import com.google.gson.Gson; 
+
 
 public class HttpClientUtil {
 	/**
@@ -41,18 +44,16 @@ public class HttpClientUtil {
 	 */
 	public static final int SO_TIMEOUT_MS = 360000;
 
-	public static final String CONTENT_TYPE_JSON_CHARSET = "application/json;charset=gbk";
+	public static final String CONTENT_TYPE_JSON_CHARSET = "application/json;charset=UTF-8";
 
-	public static final String CONTENT_TYPE_XML_CHARSET = "application/xml;charset=gbk";
+	public static final String CONTENT_TYPE_XML_CHARSET = "application/xml;charset=UTF-8";
 
 	/**
 	 * httpclient读取内容时使用的字符集
 	 */
-	public static final String CONTENT_CHARSET = "GBK";
+	public static final String CONTENT_CHARSET = "UTF-8";
 
 	public static final Charset UTF_8 = Charset.forName("UTF-8");
-
-	public static final Charset GBK = Charset.forName(CONTENT_CHARSET);
 
 	/**
 	 * 简单get调用
@@ -107,10 +108,10 @@ public class HttpClientUtil {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public static String simplePostInvoke(String url, Map<String, String> params)
+	public static String simplePostInvoke(String url, String params)
 			throws URISyntaxException, ClientProtocolException, IOException {
 		return simplePostInvoke(url, params,CONTENT_CHARSET);
-	}
+	}	
 	/**
 	 * 简单post调用
 	 * 
@@ -121,7 +122,7 @@ public class HttpClientUtil {
 	 * @throws ClientProtocolException
 	 * @throws IOException
 	 */
-	public static String simplePostInvoke(String url, Map<String, String> params,String charset)
+	public static String simplePostInvoke(String url, String params,String charset)
 			throws URISyntaxException, ClientProtocolException, IOException {
 
 		HttpClient client = buildHttpClient(false);
@@ -173,22 +174,16 @@ public class HttpClientUtil {
 	 * @throws UnsupportedEncodingException
 	 * @throws URISyntaxException
 	 */
-	public static HttpPost buildHttpPost(String url, Map<String, String> params)
+	public static HttpPost buildHttpPost(String url, String params)
 			throws UnsupportedEncodingException, URISyntaxException {
 		Assert.assertNotNull(url, "构建HttpPost时,url不能为null");
 		HttpPost post = new HttpPost(url);
 		setCommonHttpMethod(post);
 		HttpEntity he = null;
 		if (params != null) {
-			List<NameValuePair> formparams = new ArrayList<NameValuePair>();
-			for (String key : params.keySet()) {
-				formparams.add(new BasicNameValuePair(key, params.get(key)));
-			}
-			he = new UrlEncodedFormEntity(formparams, GBK);
-			post.setEntity(he);
+			StringEntity entity = new StringEntity(params); 
+			post.setEntity(entity);
 		}
-		// 在RequestContent.process中会自动写入消息体的长度，自己不用写入，写入反而检测报错
-		// setContentLength(post, he);
 		return post;
 
 	}
@@ -237,7 +232,7 @@ public class HttpClientUtil {
 		httpMethod.setHeader(HTTP.CONTENT_ENCODING, CONTENT_CHARSET);// setting
 																		// contextCoding
 //		httpMethod.setHeader(HTTP.CHARSET_PARAM, CONTENT_CHARSET);
-		// httpMethod.setHeader(HTTP.CONTENT_TYPE, CONTENT_TYPE_JSON_CHARSET);
+		httpMethod.setHeader(HTTP.CONTENT_TYPE, CONTENT_TYPE_JSON_CHARSET);
 		// httpMethod.setHeader(HTTP.CONTENT_TYPE, CONTENT_TYPE_XML_CHARSET);
 	}
 
@@ -278,13 +273,6 @@ public class HttpClientUtil {
 		Assert.assertNotNull(res.getStatusLine(), "http响应对象的状态为null");
 		switch (res.getStatusLine().getStatusCode()) {
 		case HttpStatus.SC_OK:
-//		case HttpStatus.SC_CREATED:
-//		case HttpStatus.SC_ACCEPTED:
-//		case HttpStatus.SC_NON_AUTHORITATIVE_INFORMATION:
-//		case HttpStatus.SC_NO_CONTENT:
-//		case HttpStatus.SC_RESET_CONTENT:
-//		case HttpStatus.SC_PARTIAL_CONTENT:
-//		case HttpStatus.SC_MULTI_STATUS:
 			break;
 		default:
 			throw new IOException("服务器响应状态异常,失败.");

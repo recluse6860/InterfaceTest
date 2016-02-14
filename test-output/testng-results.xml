@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="82221" started-at="2016-02-14T09:50:14Z" finished-at="2016-02-14T09:51:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="82221" started-at="2016-02-14T09:50:14Z" finished-at="2016-02-14T09:51:36Z">
+      <class name="com.saic.maven.test.InterfaceTest.CreditService.TestService">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.saic.maven.test.InterfaceTest.CreditService.TestService@1fbe7534]" name="beforeClass" is-config="true" duration-ms="22" started-at="2016-02-14T17:50:14Z" finished-at="2016-02-14T17:50:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="TestNgLearn()[pri:0, instance:com.saic.maven.test.InterfaceTest.CreditService.TestService@1fbe7534]" name="TestNgLearn" duration-ms="82164" started-at="2016-02-14T17:50:14Z" finished-at="2016-02-14T17:51:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestNgLearn -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.saic.maven.test.InterfaceTest.CreditService.TestService@1fbe7534]" name="afterClass" is-config="true" duration-ms="1" started-at="2016-02-14T17:51:36Z" finished-at="2016-02-14T17:51:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.saic.maven.test.InterfaceTest.CreditService.TestService -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
