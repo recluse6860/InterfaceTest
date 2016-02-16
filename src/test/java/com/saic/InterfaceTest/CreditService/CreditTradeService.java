@@ -15,19 +15,26 @@ import org.testng.annotations.Test;
 import com.google.gson.JsonArray;
 import com.saic.InterfaceTest.core.BaseCase;
 import com.saic.InterfaceTest.core.HttpClientUtil;
+import com.saic.InterfaceTest.core.TestDataImport;
 
 public class CreditTradeService extends BaseCase{
 
 		private final String ClassName = this.getClass().getSimpleName();
 	    private final String ServiceUrl = BaseUrl + ClassName + "/";
+	    private HashMap<String, String> TestDataMap = new HashMap<String, String>();
+	    private final String TestDataPath = rootPath + "\\src\\test\\resources\\" + ClassName + ".txt";
 
 		@BeforeClass
-	    public void beforeClass() {	    	
+	    public void beforeClass() throws IOException {	    	
 	        System.out.println("this is before class");
+	        TestDataImport TestDataImport = new TestDataImport();
+	        TestDataMap = TestDataImport.TxtDataImport(TestDataPath);
+	        System.out.println("debug");
 	    }
 
 	    @Test
-	    public void creditAdd_allok() throws ClientProtocolException, URISyntaxException, IOException {
+	    public void creditAdd_allok(HashMap<String, String> TestDataMap
+	    		) throws ClientProtocolException, URISyntaxException, IOException {
 	    	String MethodName = "creditAdd";
 			HttpClientUtil creditadd_post = new HttpClientUtil();
 			String RequestUrl = ServiceUrl + MethodName;

@@ -18,6 +18,7 @@ public class BaseCase {
 			getPath()).getParentFile().getParentFile());
 	
 	protected static final String BaseUrl = "http://127.0.0.1:8080/services/";
+	protected static final String rootPath = FILEROOT.getPath(); 
 
 	static Logger logger = LogManager.getLogger(BaseCase.class.getName());
 	

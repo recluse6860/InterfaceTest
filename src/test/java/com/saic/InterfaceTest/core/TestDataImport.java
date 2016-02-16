@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +12,7 @@ public class TestDataImport {
 	
 	static Logger logger = LogManager.getLogger(BaseCase.class.getName());
 
-	public static Map<String,String> TxtDataImport(String filePath) throws IOException
+	public static HashMap<String,String> TxtDataImport(String filePath) throws IOException
 	{
 	    HashMap<String, String> map = new HashMap<String, String>();
 
@@ -29,6 +28,7 @@ public class TestDataImport {
 	            map.put(key, value);
 	        } else {
 	            System.out.println("ignoring line: " + line);
+	            logger.error("忽略不符合规则的数据行" + line);
 	        }
 	    }
 
