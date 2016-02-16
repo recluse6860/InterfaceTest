@@ -1,4 +1,4 @@
-package com.saic.maven.test.InterfaceTest;
+package com.saic.InterfaceTest;
 
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;

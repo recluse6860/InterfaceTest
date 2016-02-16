@@ -1,4 +1,4 @@
-package com.saic.maven.test.InterfaceTest.core;
+package com.saic.InterfaceTest.core;
 
 import com.sun.jna.Pointer;
 import com.sun.jna.platform.win32.Kernel32;

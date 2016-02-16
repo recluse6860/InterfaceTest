@@ -1,4 +1,4 @@
-package com.saic.maven.test.InterfaceTest.core;
+package com.saic.InterfaceTest.core;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.saic.maven.test.InterfaceTest.App;
+import com.saic.InterfaceTest.App;
 
 public class BaseCase {
 

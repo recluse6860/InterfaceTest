@@ -1,0 +1,2 @@
+creditAdd_all_ok={"creditTradeDto":{"userId":560141,"tradeAmount":1,"acctType":1,"payType":1,"channelNo":"INT","tradeContent":"StTest","refId":"recluse005","agencyNo":"CX","chargeTime":"2016-02-05","channelSource":"30305"}}
+creditAdd_userid_null={"creditTradeDto":{"userId":560141,"tradeAmount":1,"acctType":1,"payType":1,"channelNo":"INT","tradeContent":"StTest","refId":"recluse005","agencyNo":"CX","chargeTime":"2016-02-05","channelSource":"30305"}}

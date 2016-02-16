@@ -1,4 +1,4 @@
-package com.saic.maven.test.InterfaceTest.CreditService;
+package com.saic.InterfaceTest.CreditService;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -13,8 +13,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.google.gson.JsonArray;
-import com.saic.maven.test.InterfaceTest.core.BaseCase;
-import com.saic.maven.test.InterfaceTest.core.HttpClientUtil;
+import com.saic.InterfaceTest.core.BaseCase;
+import com.saic.InterfaceTest.core.HttpClientUtil;
 
 public class CreditTradeService extends BaseCase{
 
@@ -27,7 +27,7 @@ public class CreditTradeService extends BaseCase{
 	    }
 
 	    @Test
-	    public void TestNgLearn() throws ClientProtocolException, URISyntaxException, IOException {
+	    public void creditAdd_allok() throws ClientProtocolException, URISyntaxException, IOException {
 	    	String MethodName = "creditAdd";
 			HttpClientUtil creditadd_post = new HttpClientUtil();
 			String RequestUrl = ServiceUrl + MethodName;

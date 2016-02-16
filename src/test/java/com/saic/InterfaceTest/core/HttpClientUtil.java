@@ -1,4 +1,4 @@
-package com.saic.maven.test.InterfaceTest.core;
+package com.saic.InterfaceTest.core;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
