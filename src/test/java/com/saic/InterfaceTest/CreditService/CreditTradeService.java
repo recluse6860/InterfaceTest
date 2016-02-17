@@ -22,8 +22,10 @@ public class CreditTradeService extends BaseCase{
 		private final String ClassName = this.getClass().getSimpleName();
 	    private final String ServiceUrl = BaseUrl + ClassName + "/";
 	    private HashMap<String, String> TestDataMap = new HashMap<String, String>();
-	    private final String TestDataPath = rootPath + "\\src\\test\\resources\\" + ClassName + ".txt";
-
+	    private final String TestDataPath = rootPath + "\\src\\test\\resources\\com\\saic\\InterfaceTest\\TestData\\" + ClassName + ".txt";
+	    private final String VerifycreditAdd = "creditAdd";
+	    
+	    
 		@BeforeClass
 	    public void beforeClass() throws IOException {	    	
 	        System.out.println("this is before class");
@@ -33,15 +35,13 @@ public class CreditTradeService extends BaseCase{
 	    }
 
 	    @Test
-	    public void creditAdd_allok(HashMap<String, String> TestDataMap
-	    		) throws ClientProtocolException, URISyntaxException, IOException {
-	    	String MethodName = "creditAdd";
+	    public void creditAdd_all_ok() throws ClientProtocolException, URISyntaxException, IOException {
+//	    	String MethodName = "creditAdd";
+	    	String MethodName = Thread.currentThread().getStackTrace()[1].getMethodName(); 
 			HttpClientUtil creditadd_post = new HttpClientUtil();
-			String RequestUrl = ServiceUrl + MethodName;
-			String RequestBody = "{\"creditTradeDto\":{\"userId\":560141,\"tradeAmount\":1,\"acctType\":1,\"payType\":1,\"channelNo\":\"INT\",\"tradeContent\":\"StTest\",\"refId\":\"recluse005\",\"agencyNo\":\"CX\",\"chargeTime\":\"2016-02-05\",\"channelSource\":\"30305\"}}";
-//			JsonArray jsonObject = JsonArray.fromObject(RequestBody);
-//			Map RequestBodyMap = new HashMap();
-//			RequestBodyMap = transStringToMap(RequestBody);
+			String RequestUrl = ServiceUrl + VerifycreditAdd;
+//			String RequestBody = "{\"creditTradeDto\":{\"userId\":560141,\"tradeAmount\":1,\"acctType\":1,\"payType\":1,\"channelNo\":\"INT\",\"tradeContent\":\"StTest\",\"refId\":\"recluse005\",\"agencyNo\":\"CX\",\"chargeTime\":\"2016-02-05\",\"channelSource\":\"30305\"}}";
+			String RequestBody = TestDataMap.get(MethodName);
 			String returnStr;
 			returnStr =creditadd_post.simplePostInvoke(RequestUrl, RequestBody , "UTF-8");
 			System.out.println("this is TestNG test case");
