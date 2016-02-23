@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<common></common>
+	<CxfLogin>
+		<cxfUrl>https://cxfpay.sit.com/pay/login.htm</cxfUrl>
+		<userName>17100000056</userName>
+		<passWord>123456</passWord>
+		<checkCode>PF9H</checkCode>
+		<loginInfo>退出</loginInfo>
+	</CxfLogin>
+	<UserApplyCard>		
+		<address>上海市长宁区华山路1568号</address>
+		<postCode>200080</postCode>
+		<addrName>唐糖收件</addrName>
+		<addrMobile>13800138000</addrMobile>
+		<applyInfo>您的资料已提交！</applyInfo>
+	</UserApplyCard>
+</data>
