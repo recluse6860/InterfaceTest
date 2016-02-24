@@ -98,8 +98,8 @@ public class ParseXml {
 	
 	public static void main(String[] args) {
 		
-		ParseXml px = new ParseXml("config/TestBaidu.xml");//给定config.xml的路径
-		List<Element> elements = px.getElementObjects("/*/testUI");
+		ParseXml px = new ParseXml("src/test/resources/test-data/CreditTradeService.xml");//给定config.xml的路径
+		List<Element> elements = px.getElementObjects("/*/common");
 		Object[][] object = new Object[elements.size()][];
 		for (int i =0; i<elements.size(); i++) {
 			Object[] temp = new Object[]{px.getChildrenInfoByElement(elements.get(i))};

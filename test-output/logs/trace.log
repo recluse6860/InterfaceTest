@@ -22,3 +22,7 @@
 2016-01-26 at 08:48:18 CST FATAL com.saic.maven.test.InterfaceTest.Hello 19 main - 我是fatal信息
 2016-01-26 at 08:48:18 CST DEBUG com.saic.maven.test.InterfaceTest.Hello 20 main - 我是debug信息
 2016-01-26 at 08:48:18 CST TRACE com.saic.maven.test.InterfaceTest.Hello 21 main - exit
+2016-02-24 at 16:41:44 CST INFO  com.saic.InterfaceTest.core.VenusAdaptor 70 runVenusAdaptor - Venus Adaptor Pid is8500
+2016-02-24 at 18:10:04 CST INFO  com.saic.InterfaceTest.core.VenusAdaptor 70 runVenusAdaptor - Venus Adaptor Pid is7664
+2016-02-24 at 18:25:16 CST INFO  com.saic.InterfaceTest.core.VenusAdaptor 70 runVenusAdaptor - Venus Adaptor Pid is9784
+2016-02-24 at 18:27:13 CST INFO  com.saic.InterfaceTest.core.VenusAdaptor 70 runVenusAdaptor - Venus Adaptor Pid is6824

@@ -23,17 +23,12 @@ public class CreditTradeService extends TestBase{
 
 		private final String ClassName = this.getClass().getSimpleName();
 	    private final String ServiceUrl = BaseUrl + ClassName + "/";
-	    private HashMap<String, String> TestDataMap = new HashMap<String, String>();
-	    private final String TestDataPath = rootPath + "\\src\\test\\resources\\com\\saic\\InterfaceTest\\TestData\\CreditService\\" + ClassName + ".txt";
 	    private final String VerifycreditAdd = "creditAdd";
 	    
 	    
 		@BeforeClass
 	    public void beforeClass() throws IOException {	    	
 	        System.out.println("this is before class");
-	        TestDataImport TestDataImport = new TestDataImport();
-	        TestDataMap = TestDataImport.TxtDataImport(TestDataPath);
-	        System.out.println("debug");
 	    }
 
 		@Test(dataProvider="providerMethod")
@@ -43,7 +38,6 @@ public class CreditTradeService extends TestBase{
 	    	String MethodName = Thread.currentThread().getStackTrace()[1].getMethodName(); 
 			HttpClientUtil creditadd_post = new HttpClientUtil();
 			String RequestUrl = ServiceUrl + VerifycreditAdd;
-//			String RequestBody = TestDataMap.get(MethodName);
 			String RequestBody = param.get(MethodName);
 			String returnStr;
 			returnStr =creditadd_post.simplePostInvoke(RequestUrl, RequestBody , "UTF-8");
