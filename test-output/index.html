@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,6 +103,11 @@
                       <span>
                         <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-CreditService_Suite" title="com.saic.InterfaceTest.CreditService.CreditTradeService" hash-for-method="creditAdd_all_ok({creditAdd_all_ok={&quot;creditTradeDto&quot;:{&quot;userId&quot;:560141,&quot;tradeAmount&quot;:1,&quot;acctType&quot;:1,&quot;payType&quot;:1,&quot;chann...)">creditAdd_all_ok({creditAdd_all_ok={"creditTradeDto":{"userId":560141,"tradeAmount":1,"acctType":1,"payType":1,"chann...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-CreditService_Suite" title="com.saic.InterfaceTest.CreditService.CreditTradeService" hash-for-method="creditAdd_userid_null({creditAdd_userid_null={&quot;creditTradeDto&quot;:{&quot;userId&quot;:null,&quot;tradeAmount&quot;:1,&quot;acctType&quot;:1,&quot;payType&quot;:1,&quot;ch...)">creditAdd_userid_null({creditAdd_userid_null={"creditTradeDto":{"userId":null,"tradeAmount":1,"acctType":1,"payType":1,"ch...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-CreditService_Suite -->
@@ -129,6 +134,14 @@
                   </a> <!-- creditAdd_all_ok({creditAdd_all_ok={"creditTradeDto":{"userId":560141,"tradeAmount":1,"acctType":1,"payType":1,"chann...) -->
                   <span class="method-name">creditAdd_all_ok</span>
                   <span class="parameters">({creditAdd_all_ok={"creditTradeDto":{"userId":560141,"tradeAmount":1,"acctType":1,"payType":1,"channelNo":"INT","tradeContent":"StTest","refId":"recluse005","agencyNo":"CX","chargeTime":"2016-02-05","channelSource":"30305"}}})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="creditAdd_userid_null({creditAdd_userid_null={&quot;creditTradeDto&quot;:{&quot;userId&quot;:null,&quot;tradeAmount&quot;:1,&quot;acctType&quot;:1,&quot;payType&quot;:1,&quot;ch...)">
+                  </a> <!-- creditAdd_userid_null({creditAdd_userid_null={"creditTradeDto":{"userId":null,"tradeAmount":1,"acctType":1,"payType":1,"ch...) -->
+                  <span class="method-name">creditAdd_userid_null</span>
+                  <span class="parameters">({creditAdd_userid_null={"creditTradeDto":{"userId":null,"tradeAmount":1,"acctType":1,"payType":1,"channelNo":"INT","tradeContent":"StTest","refId":"recluse005","agencyNo":"CX","chargeTime":"2016-02-05","channelSource":"30305"}}})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -187,11 +200,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'creditAdd_all_ok')
 data.setCell(0, 2, 'com.saic.InterfaceTest.CreditService.CreditTradeService')
-data.setCell(0, 3, 1290);
+data.setCell(0, 3, 1686);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'creditAdd_userid_null')
+data.setCell(1, 2, 'com.saic.InterfaceTest.CreditService.CreditTradeService')
+data.setCell(1, 3, 26);
 window.suiteTableData['CreditService_Suite']= { tableData: data, tableDiv: 'times-div-CreditService_Suite'}
 return data;
 }
@@ -232,22 +249,26 @@ return data;
               <div class="chronological-class-name">com.saic.InterfaceTest.CreditService.CreditTradeService</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">32003 ms</span>
+                <span class="method-start">31173 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">creditAdd_all_ok({creditAdd_all_ok={"creditTradeDto":{"userId":560141,"tradeAmount":1,"acctType":1,"payType":1,"chann...)</span>
-                <span class="method-start">32301 ms</span>
+                <span class="method-start">31600 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">creditAdd_userid_null({creditAdd_userid_null={"creditTradeDto":{"userId":null,"tradeAmount":1,"acctType":1,"payType":1,"ch...)</span>
+                <span class="method-start">33289 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">33591 ms</span>
+                <span class="method-start">33316 ms</span>
               </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.saic.InterfaceTest.CreditService.InitAndCecycle</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afteresuit</span>
-                <span class="method-start">33622 ms</span>
+                <span class="method-start">33357 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

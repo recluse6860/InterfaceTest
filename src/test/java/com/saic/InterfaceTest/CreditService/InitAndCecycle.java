@@ -18,7 +18,6 @@ public class InitAndCecycle extends TestBase{
 		process = VenusAdaptor.runVenusAdaptor(BatFilePath);
 		
 		Thread.sleep(30000);
-//		FILEROOT;
         System.out.println("in beforesuit");
         
     } 

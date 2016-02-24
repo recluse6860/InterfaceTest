@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="CreditService Suite" duration-ms="1590" started-at="2016-02-24T10:27:44Z" finished-at="2016-02-24T10:27:45Z">
+  <suite name="CreditService Suite" duration-ms="2180" started-at="2016-02-24T11:10:13Z" finished-at="2016-02-24T11:10:15Z">
     <groups>
     </groups>
-    <test name="CreditService API" duration-ms="1590" started-at="2016-02-24T10:27:44Z" finished-at="2016-02-24T10:27:45Z">
+    <test name="CreditService API" duration-ms="2180" started-at="2016-02-24T11:10:13Z" finished-at="2016-02-24T11:10:15Z">
       <class name="com.saic.InterfaceTest.CreditService.InitAndCecycle">
-        <test-method status="PASS" signature="beforesuit()[pri:0, instance:com.saic.InterfaceTest.CreditService.InitAndCecycle@6110e3b5]" name="beforesuit" is-config="true" duration-ms="32002" started-at="2016-02-24T18:27:12Z" finished-at="2016-02-24T18:27:44Z">
+        <test-method status="PASS" signature="beforesuit()[pri:0, instance:com.saic.InterfaceTest.CreditService.InitAndCecycle@76ef024c]" name="beforesuit" is-config="true" duration-ms="31137" started-at="2016-02-24T19:09:42Z" finished-at="2016-02-24T19:10:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforesuit -->
-        <test-method status="PASS" signature="afteresuit()[pri:0, instance:com.saic.InterfaceTest.CreditService.InitAndCecycle@6110e3b5]" name="afteresuit" is-config="true" duration-ms="110" started-at="2016-02-24T18:27:45Z" finished-at="2016-02-24T18:27:45Z">
+        <test-method status="PASS" signature="afteresuit()[pri:0, instance:com.saic.InterfaceTest.CreditService.InitAndCecycle@76ef024c]" name="afteresuit" is-config="true" duration-ms="116" started-at="2016-02-24T19:10:15Z" finished-at="2016-02-24T19:10:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afteresuit -->
       </class> <!-- com.saic.InterfaceTest.CreditService.InitAndCecycle -->
       <class name="com.saic.InterfaceTest.CreditService.CreditTradeService">
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@1bd5b1dc]" name="beforeClass" is-config="true" duration-ms="0" started-at="2016-02-24T18:27:44Z" finished-at="2016-02-24T18:27:44Z">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@45800894]" name="beforeClass" is-config="true" duration-ms="1" started-at="2016-02-24T19:10:13Z" finished-at="2016-02-24T19:10:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="creditAdd_all_ok(java.util.Map)[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@1bd5b1dc]" name="creditAdd_all_ok" duration-ms="1290" started-at="2016-02-24T18:27:44Z" data-provider="providerMethod" finished-at="2016-02-24T18:27:45Z">
+        <test-method status="PASS" signature="creditAdd_all_ok(java.util.Map)[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@45800894]" name="creditAdd_all_ok" duration-ms="1686" started-at="2016-02-24T19:10:13Z" data-provider="providerMethod" finished-at="2016-02-24T19:10:15Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- creditAdd_all_ok -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@1bd5b1dc]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-02-24T18:27:45Z" finished-at="2016-02-24T18:27:45Z">
+        <test-method status="PASS" signature="creditAdd_userid_null(java.util.Map)[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@45800894]" name="creditAdd_userid_null" duration-ms="26" started-at="2016-02-24T19:10:15Z" data-provider="providerMethod" finished-at="2016-02-24T19:10:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{creditAdd_userid_null={"creditTradeDto":{"userId":null,"tradeAmount":1,"acctType":1,"payType":1,"channelNo":"INT","tradeContent":"StTest","refId":"recluse005","agencyNo":"CX","chargeTime":"2016-02-05","channelSource":"30305"}}}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- creditAdd_userid_null -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.saic.InterfaceTest.CreditService.CreditTradeService@45800894]" name="afterClass" is-config="true" duration-ms="0" started-at="2016-02-24T19:10:15Z" finished-at="2016-02-24T19:10:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
