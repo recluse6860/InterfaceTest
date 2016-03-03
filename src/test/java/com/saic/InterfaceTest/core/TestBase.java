@@ -6,6 +6,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.dom4j.Element;
 import org.testng.annotations.DataProvider;
 
@@ -13,20 +15,19 @@ import com.saic.InterfaceTest.core.ParseXml;
 
 public class TestBase {	
 	
-	private ParseXml px;
-	
-	private Map<String, String> commonMap;
-	
+	private ParseXml px;	
+	private Map<String, String> commonMap;	
 	protected static final File FILEROOT = (new File(Class.class.getClass().getResource("/").
-			getPath()).getParentFile().getParentFile());
-	
+			getPath()).getParentFile().getParentFile());	
 	protected static final String BaseUrl = "http://127.0.0.1:8080/services/";
 	protected static final String rootPath = FILEROOT.getPath(); 
+	static Logger logger = LogManager.getLogger(TestBase.class.getName());
 	
 	
 	private void initialPx(){
 		if(px==null){			
 			px = new ParseXml("src/test/resources/test-data/"+this.getClass().getSimpleName()+".xml");
+			logger.info("get test data " + this.getClass().getSimpleName());
 		}
 	}
 	
@@ -36,6 +37,7 @@ public class TestBase {
 			commonMap = px.getChildrenInfoByElement(element);
 		}
 	}
+	
 	
 	private Map<String, String> getMergeMapData(Map<String, String> map1, Map<String, String> map2){
 		Iterator<String> it = map2.keySet().iterator();

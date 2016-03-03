@@ -9,8 +9,6 @@ import java.util.Properties;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.saic.InterfaceTest.App;
-
 public class BaseCase {
 
 	// 项目文件夹

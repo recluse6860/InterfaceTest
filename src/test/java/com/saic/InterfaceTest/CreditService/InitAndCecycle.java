@@ -1,5 +1,7 @@
 package com.saic.InterfaceTest.CreditService;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterSuite;
 
@@ -10,22 +12,24 @@ import com.saic.InterfaceTest.core.Win32Process;
 public class InitAndCecycle extends TestBase{
 	
 	private Win32Process process;
+	static Logger logger = LogManager.getLogger(VenusAdaptor.class.getName());
 	
 	@BeforeSuite
-    public void beforesuit() throws InterruptedException{  
+    public void BeforeSuite() throws InterruptedException{  
 		
 		String BatFilePath = rootPath + "\\venus-http-adaptor\\bin\\launcher.bat";
+		logger.info("Run venus adaptor on" + BatFilePath);
 		process = VenusAdaptor.runVenusAdaptor(BatFilePath);
 		
-		Thread.sleep(30000);
-        System.out.println("in beforesuit");
-        
+		logger.info("wait 30s until VenusAdaptor is standby");
+		Thread.sleep(30000);       
     } 
 	
 	@AfterSuite
-    public void afteresuit(){  
+    public void AfterSuite(){  
 		
+		logger.info("close VenusAdaptor");
 		VenusAdaptor.closeVenusAdaptor(process);
-        System.out.println("in beforesuit");  
+		logger.info("Test finish");
     } 	
 }

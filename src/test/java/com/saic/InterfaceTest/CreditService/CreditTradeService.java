@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import org.apache.http.client.ClientProtocolException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.testng.annotations.AfterClass;
@@ -25,11 +27,12 @@ public class CreditTradeService extends TestBase{
 	    private final String ServiceUrl = BaseUrl + ClassName + "/";
 	    private final String VerifycreditAdd = "creditAdd";
 	    private HttpClientUtil creditadd_post = new HttpClientUtil();
+	    static Logger logger = LogManager.getLogger(CreditTradeService.class.getName());
 	    
 	    
 		@BeforeClass
 	    public void beforeClass() throws IOException {	    	
-	        System.out.println("this is before class");
+	        logger.info("start test " + ClassName);
 	    }
 
 		@Test(dataProvider="providerMethod")
